@@ -157,13 +157,33 @@
 .customize_item{
 margin-bottom: 30px;
 }
+.main_content_left {
+    float: none;
+    width: 100%;
+  }
+.main_content_right {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+
+
+
+
 
 }
 
 @media only screen and (max-width: 768px) {
 
-
-
+.footer_inside {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer_items {
+    width: 100%;
+}
 
 }
 
@@ -180,7 +200,9 @@ margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 684px) {
-
+.top_menu {
+  display: none;
+}
 
 
 }
@@ -256,6 +278,11 @@ flex-wrap: wrap;
 .acc-btn {
   padding-right: 30px;
 }
+.article_content_title {
+    font-size: 1.4rem;
+  }
+
+
 }
 
 @media only screen and (max-width: 425px) {
