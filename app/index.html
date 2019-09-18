@@ -30,27 +30,8 @@
 	<link rel="stylesheet" href="css/libs.min.css" />
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
 	</script>
-
 </head>
-
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<header id="header_section" class="block header_fon">
 		<div class="top_line">
 			<div class="container">
@@ -60,17 +41,17 @@
 						<div class="top_menu">
 							<ul>
 								<li> <a href="#">главная</a></li>
-								<li class="menu-item-has-children"> <a href="#">услуги</a>
+								<li class="menu-item-has-children"> <a href="/portfolio/essentials/">услуги</a>
 									<ul class="sub-menu">
-										<li> <a href="#">главная</a></li>
-										<li> <a href="#">услуги</a></li>
+										<li> <a href="/portfolio/essentials/page.html">страница</a></li>
+										<li> <a href="/portfolio/essentials/single.html">пост</a></li>
 
 									</ul>
 
 								</li>
-								<li> <a href="#">блог</a></li>
-								<li> <a href="#">контакты</a></li>
-								<li> <a href="#">карта сайта</a></li>
+								<li> <a href="/portfolio/essentials/category.html">блог</a></li>
+								<li> <a href="/portfolio/essentials/page.html">контакты</a></li>
+								<li> <a href="/portfolio/essentials/page.html">карта сайта</a></li>
 							</ul>
 						</div>
 						<div class="mobile_minu_block">
@@ -78,18 +59,20 @@
 							<h3 onclick="document.getElementsByTagName('nav')[0].className = 'menu menu_active'">&lt;меню/&gt;</h3>
 							<nav class="menu">
 								<p onclick="document.getElementsByTagName('nav')[0].className = 'menu'">&lt;закрыть/&gt;</p>
-								<ul>
-									<li> <a href="http://localhost:3000/category.html">главная</a></li>
-									<li class="menu-item-has-children"> <a href="http://localhost:3000/category.html">услуги</a>
-										<ul class="sub-menu">
-											<li> <a href="http://localhost:3000/category.html">главная</a></li>
-											<li> <a href="http://localhost:3000/category.html">услуги</a></li>
-										</ul>
-									</li>
-									<li> <a href="http://localhost:3000/category.html">блог</a></li>
-									<li> <a href="http://localhost:3000/category.html">контакты</a></li>
-									<li> <a href="http://localhost:3000/category.html">карта сайта</a></li>
-								</ul>
+		<ul>
+								<li> <a href="/portfolio/essentials/">главная</a></li>
+								<li class="menu-item-has-children"> <a href="/portfolio/essentials/category.html">услуги</a>
+									<ul class="sub-menu">
+										<li> <a href="/portfolio/essentials/page.html">страница</a></li>
+										<li> <a href="/portfolio/essentials/single.html">пост</a></li>
+
+									</ul>
+
+								</li>
+								<li> <a href="/portfolio/essentials/category.html">блог</a></li>
+								<li> <a href="/portfolio/essentials/page.html">контакты</a></li>
+								<li> <a href="/portfolio/essentials/page.html">карта сайта</a></li>
+							</ul>
 							</nav>
 						</div>
 
@@ -524,7 +507,66 @@
 
 <!-- Custom HTML -->
 <script src="js/scripts.min.js"></script>
+<script>
 
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.751574, 37.573856],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/Map_symbol_location_02.png',
+            // Размеры метки.
+            iconImageSize: [64, 64],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
+
+        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/Map_symbol_location_02.png',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+});
+
+
+
+</script>
 </body>
 
 </html>
