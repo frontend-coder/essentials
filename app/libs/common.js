@@ -1,13 +1,20 @@
+
+
+
+
+
+
 $(document).ready(function () {
 
-// variables
-var $header_top = $('.header-top');
-var $nav = $('nav');
 
-// toggle menu
-$header_top.find('a').on('click', function() {
-  $(this).parent().toggleClass('open-menu');
-});
+// // variables
+// var $header_top = $('.header-top');
+// var $nav = $('nav');
+
+// // toggle menu
+// $header_top.find('a').on('click', function() {
+//   $(this).parent().toggleClass('open-menu');
+// });
 
   $(function() {
     $('.acc-btn').click(function() {
@@ -54,9 +61,6 @@ items: 4,
 600:{
             items:2
         },
-
-
-
         800:{
             items:3
         },

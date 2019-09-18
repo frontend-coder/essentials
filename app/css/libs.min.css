@@ -6800,6 +6800,105 @@ h1 {
 /*
 завершаю оформление садбара
 */
+.mobile_minu_block {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+
+.mobile_minu_block nav {
+  line-height: 1.4;
+  background: #1d1f20;
+  padding: 25px 35px;
+  width: 300px;
+  top: -webkit-calc(50vh - 247px);
+  top: calc(50vh - 247px);
+  left: -webkit-calc(50vw - 150px);
+  left: calc(50vw - 150px);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0 60px -15px black;
+          box-shadow: 0 0 60px -15px black;
+  -webkit-transform: scale(0) rotate(360deg);
+      -ms-transform: scale(0) rotate(360deg);
+          transform: scale(0) rotate(360deg);
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
+  font-size: 18px;
+  z-index: 1000;
+  top: 0;
+}
+
+.mobile_minu_block nav.menu_active {
+  -webkit-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
+.mobile_minu_block nav > ul > li {
+  margin: 20px 0;
+  color: #b5bc67;
+}
+
+.mobile_minu_block nav > ul > li > ul {
+  margin: 10px 0 0 20px;
+  border-left: 1px solid #4d4d4c;
+  color: #ae94c0;
+  list-style: none;
+}
+
+.mobile_minu_block nav > ul > li > ul > li {
+  margin: 7px 0;
+  padding-left: 20px;
+}
+
+.mobile_minu_block nav a:hover {
+  color: #dd925f;
+}
+
+.mobile_minu_block h3 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  font-size: 20px;
+  color: #cfd8dc;
+  top: -webkit-calc(50vh - 40px);
+  top: calc(50vh - 40px);
+  left: -webkit-calc(50vw - 126px);
+  left: calc(50vw - 126px);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 0;
+  right: 0;
+}
+
+.mobile_minu_block h3:hover {
+  padding-bottom: 10px;
+}
+
+.mobile_minu_block p {
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  color: #cfd8dc;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.mobile_minu_block p:hover {
+  border-bottom: 2px dotted #cfd8dc;
+  padding-bottom: 5px;
+}
+
+.mobile_minu_block ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1200px) {
   .header-content {
@@ -6966,6 +7065,9 @@ h1 {
 @media only screen and (max-width: 684px) {
   .top_menu {
     display: none;
+  }
+  .mobile_minu_block {
+    display: block;
   }
 }
 
