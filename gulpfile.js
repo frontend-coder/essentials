@@ -52,9 +52,9 @@ gulp.task('styles', () => {
 gulp.task('scripts', done => {
 	var jsFiles = [
 'app/libs/plagins/jquery/jquery.min.js',
-'app/libs/plagins/owlcarousel/owl.carousel.min.js',
+'app/libs/plagins/owlcarousel/dist/owl.carousel.min.js',
 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-'app/libs/plagins/aos-master/dist/aos.js',
+'app/libs/plagins/aos-master/js/aos.js',
 'app/libs/common.js'
 // Always at the end
 ];
