@@ -2,3 +2,5 @@
 [0609/170344.194:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0609/171215.129:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0609/195010.588:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0725/110156.390:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0725/123405.195:ERROR:crash_report_database_win.cc(428)] unexpected header
