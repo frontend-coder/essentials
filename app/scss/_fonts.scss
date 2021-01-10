@@ -1,13 +1,14 @@
 /* font-family: "OpenSansRegular"; */
 @font-face {
-	font-family: "SourceSansProLight";
-	src: url("../fonts/SourceSansProLight/SourceSansPro-Light.eot?#iefix")format("embedded-opentype"),
-			url("../fonts/SourceSansProLight/SourceSansPro-Light.woff2") format("woff2"),
-		url("../fonts/SourceSansProLight/SourceSansPro-Light.woff") format("woff"),
-		url("../fonts/SourceSansProLight/SourceSansPro-Light.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 100;
-	font-display: fallback;
+  src:
+    url("../fonts/SourceSansProLight/SourceSansPro-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SourceSansProLight/SourceSansPro-Light.woff2") format("woff2"),
+    url("../fonts/SourceSansProLight/SourceSansPro-Light.woff") format("woff"),
+    url("../fonts/SourceSansProLight/SourceSansPro-Light.ttf") format("truetype");
+  font-family: "SourceSansProLight";
+  font-weight: 100;
+  font-style: normal;
+  font-display: fallback;
 }
 
 // 100 Extra Light or Ultra Light
@@ -20,8 +21,6 @@
 // 800 Black, Extra Bold or Heavy
 // 900 Extra Black, Fat, Poster or Ultra Black
 
-
-
 // 100 — тонкое начертание;
 // 200 — сверхсветлое;
 // 300 — светлое;
@@ -32,7 +31,5 @@
 // 800 — сверхжирное;
 // 900 — тяжёлое.
 // https://webfonts.pro/
-
-
 
 // @include font-face("Roboto", "../fonts/roboto/roboto-bold-italic", 700, italic, "maximum" );
