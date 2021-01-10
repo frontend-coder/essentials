@@ -1264,6 +1264,7 @@ h1,h2,h3{font-weight:200}
 .footer_items{width:32%}
 .category_sidebar .widget,.footer_bar .widget{margin-bottom:30px;border:1px solid #cfd3d5;padding:10px 2%;width:100%;background:#fff}
 .category_sidebar .widget-title,.footer_bar .widget .widget-title{margin-bottom:20px;padding:10px 0;text-align:center;text-transform:uppercase;background-color:#1089d4}
+.category_sidebar .widget-title{color:#fff}
 .footer_bar .widget .widget-title{background-color:transparent}
 .footer_bar .widget{margin-bottom:20px}
 .category_sidebar .widget ul,.footer_bar .widget ul{list-style:none;padding-left:30px}
